@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+import csv
+
+labels = []
+sizes = []
+
+with open("etat_reservations.csv", newline='', encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        labels.append(row['statut'])
+        sizes.append(int(row['total']))
+
+plt.figure(figsize=(6, 6))
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=['#f39c12', '#2ecc71', '#e74c3c'])
+plt.title("État des Réservations")
+plt.tight_layout()
+plt.savefig("etat_reservations.png")

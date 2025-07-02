@@ -1,0 +1,75 @@
+/* === IMAGE EN FOND SUR TOUT LE BODY === */
+body {
+    background-image: url('u.png'); /* ✅ l’image doit être dans le même dossier que index.html */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* === OVERLAY POUR LIRE LE TEXTE FACILEMENT === */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombre mais transparent */
+    z-index: 0;
+}
+
+/* === CARTE MUI === */
+.mui-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    z-index: 1;
+    position: relative;
+}
+.mui-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* === TITRE PRINCIPAL === */
+.mui-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 1.5rem;
+}
+
+/* === STYLE DU TABLEAU === */
+.table thead {
+    background-color: #e3f2fd;
+}
+
+/* === BOUTONS === */
+.btn-mui {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+.btn-mui-primary {
+    background-color: #1976d2;
+    color: white;
+}
+.btn-mui-primary:hover {
+    background-color: #115293;
+}
+.btn-warning,
+.btn-danger {
+    border-radius: 8px;
+}
+
+/* === INPUT DE RECHERCHE === */
+#searchInput {
+    max-width: 300px;
+    margin-bottom: 1rem;
+}

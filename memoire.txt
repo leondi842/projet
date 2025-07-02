@@ -1,0 +1,35 @@
+Le projet vise à développer une plateforme de réservation de chambres pour la Maison des Hôtes de l’Université Norbert Zongo. 
+
+Contexte et objectifs :
+- Offrir aux professeurs invités et intervenants un système simple pour réserver une chambre.
+- Simplifier la gestion des réservations pour l’administrateur et la DSI de l’Université Norbert Zongo.
+- Envoyer automatiquement un email de confirmation après validation de la réservation.
+
+Fonctionnalités :
+- Gestion des types d’utilisateurs :
+  • Professeurs invités : réservation gratuite.
+  • Intervenants : réservation payante (initialement, puis finalement sans paiement, mais confirmation par mail conservée).
+- Vérification de la disponibilité :
+  • La plateforme vérifie si une chambre est libre pour la période demandée.
+  • Si une chambre est déjà réservée, elle est marquée « indisponible ».
+- Gestion des chambres côté administrateur :
+  • Création, modification, suppression des chambres (11 chambres au total, toutes climatisées, avec Wi-Fi et douche privée).
+  • Consultation du planning des réservations.
+- Réservation :
+  • Lorsqu’un intervenant réserve, un formulaire de paiement était prévu (Orange Money, Moov Money, Coris), mais l’instruction de stage a finalement supprimé l’étape de paiement. Seule la réservation et l’envoi d’un email de confirmation sont conservés.
+  • Les professeurs invités sélectionnent la chambre et la période, validation sans paiement.
+- Envoi d’e-mails :
+  • Utilisation de PHPMailer pour envoyer des emails de confirmation à l’utilisateur après la réservation.
+  • L’email contient les détails de la réservation : numéro de chambre, dates, nom de l’utilisateur.
+- Architecture :
+  • Client-serveur : frontend PHP/HTML/JS, backend PHP, base de données MySQL.
+  • Tables MySQL :
+    – chambres (numero, description, statut).
+    – reservations (utilisateur_id, numero_chambre, date_debut, date_fin, date_reservation, moyen_paiement, montant).
+    – utilisateurs (id, email, type_utilisateur, etc.).
+- Parties prenantes :
+  • Professeurs invités, intervenants, administrateur de la Maison des Hôtes, DSI de l’Université Norbert Zongo.
+- Contraintes techniques :
+  • Toutes les chambres sont identiques (climatisées, Wi-Fi, douche privée).
+  • L’administrateur doit pouvoir voir en temps réel la disponibilité des chambres.
+  • Limite de temps : la plateforme ne sera pas mise en production cette année, mais doit être fonctionnelle pour la soutenance.

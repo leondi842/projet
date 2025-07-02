@@ -1,0 +1,168 @@
+/* ========= Base ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========= Header ========= */
+header {
+  background-color: #0052cc;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* ========= Navigation ========= */
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  color: #0052cc;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #003f9e;
+}
+
+/* ========= Card ========= */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ========= Buttons ========= */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003f9e;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #cacaca;
+}
+
+/* ========= Table ========= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #0052cc;
+  color: white;
+  text-align: left;
+}
+
+/* ========= Formulaire ========= */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #0052cc;
+  outline: none;
+}
+
+/* ========= Footer ========= */
+footer {
+  background: #003f9e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* ========= Animation légère ========= */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
