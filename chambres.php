@@ -40,21 +40,13 @@ $suggestion = $type_user === 'invité'
       background: linear-gradient(rgba(40, 167, 69, 0.8), rgba(26, 124, 52, 0.8)), url('images_chambres/banner.jpg') center/cover no-repeat;
       color: #e3f2fd;
       padding: 100px 0;
-      text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    }
-
-    .hero p {
-      font-size: 1.4rem;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-      max-width: 600px;
-      margin: 0 auto;
+    .hero img {
+      height: 100px;
+      border-radius: 12px;
+      margin-bottom: 15px;
     }
 
     .alert-info {
@@ -162,29 +154,13 @@ $suggestion = $type_user === 'invité'
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .map-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    #map {
-      height: 400px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
     @media (max-width: 768px) {
       .hero {
         padding: 60px 0;
       }
 
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
+      .hero img {
+        margin-bottom: 10px;
       }
 
       .chambre-card {
@@ -201,10 +177,15 @@ $suggestion = $type_user === 'invité'
 
   <?php include 'navbar2.php'; ?>
 
-  <!-- Hero Section -->
+  <!-- Hero Section avec logo -->
   <div class="hero" role="banner" aria-label="Section principale">
-    <h1>Bienvenue à la Maison des Hôtes</h1>
-    <p>Explorez nos chambres confortables, modernes et connectées</p>
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+      <img src="R.jpeg" alt="Logo Maison des Hôtes" />
+      <div class="text-center text-md-start">
+        <h1>Bienvenue à la Maison des Hôtes</h1>
+        <p>Explorez nos chambres confortables, modernes et connectées</p>
+      </div>
+    </div>
   </div>
 
   <!-- Suggestion -->
@@ -228,47 +209,28 @@ $suggestion = $type_user === 'invité'
       <?php endfor; ?>
     </div>
   </div>
-<!-- Vidéos de Présentation -->
-<div class="videos-container">
-  <h3 class="text-center mb-4">Découvrez la Maison des Hôtes en Vidéo</h3>
-  <div class="row justify-content-center">
-    <div class="col-md-6 mb-4">
-      <video autoplay muted loop playsinline class="w-100" aria-label="Vidéo de présentation 1">
-        <source src="video1.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la lecture de la vidéo.
-      </video>
-    </div>
-    <div class="col-md-6 mb-4">
-      <video autoplay muted loop playsinline class="w-100" aria-label="Vidéo de présentation 2">
-        <source src="videos/video.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la lecture de la vidéo.
-      </video>
+
+  <!-- Vidéos de Présentation -->
+  <div class="videos-container">
+    <h3 class="text-center mb-4">Découvrez la Maison des Hôtes en Vidéo</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <video autoplay muted loop playsinline class="w-100" aria-label="Vidéo de présentation 1">
+          <source src="video1.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture de la vidéo.
+        </video>
+      </div>
+      <div class="col-md-6 mb-4">
+        <video autoplay muted loop playsinline class="w-100" aria-label="Vidéo de présentation 2">
+          <source src="videos/video.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture de la vidéo.
+        </video>
+      </div>
     </div>
   </div>
-</div>
-
-  <!-- Carte Google Maps -->
-
 
   <?php include 'footer.php'; ?>
 
-  <!-- JS Bootstrap + Google Maps -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function initMap() {
-      const location = { lat: 12.2491, lng: -2.3617 }; // Koudougou
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: location,
-      });
-      new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Maison des Hôtes",
-        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>

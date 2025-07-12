@@ -24,8 +24,24 @@ $result = $conn->query($sql);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <style>
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ima.png'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
         body {
-            background: #f8f9fa;
+            background:hsl(210, 94.30%, 52.20%);
         }
         .card {
             border-radius: 15px;

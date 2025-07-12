@@ -78,9 +78,26 @@ function buildQueryString($overrides = []) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+     <link rel="icon" href="R.jpeg" type="image/png" />
     <title>Administration des Factures - Maison des Hôtes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <style>
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('presi1.jpg'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
+
+
         @media print {
             .no-print { display: none !important; }
             .print-only { display: block !important; }

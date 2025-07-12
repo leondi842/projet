@@ -26,6 +26,22 @@ $fin = $_POST['fin'] ?? '';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.css">
 
     <style>
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('presi2.jpg'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
+
+
         body {
             background-image: url('ima.png');
             background-size: cover;

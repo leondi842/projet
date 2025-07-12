@@ -34,6 +34,23 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Liste des Utilisateurs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('n.png'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
+
+
         body { font-family: Arial; padding: 20px; }
         table { border-collapse: collapse; width: 100%; }
         th, td { border: 1px solid #ccc; padding: 10px; }
@@ -62,7 +79,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php include 'navbar1.php'; ?>
 
 <div class="mb-4">
-    <a href="ajouter_intervenant.php" class="btn btn-primary">+ Créer un Visiteur</a>
+    <a href="ajouter_intervenant.php" class="btn btn-primary">+ Créer un INvité</a>
 </div>
 
 <?php if (count($clients) > 0): ?>

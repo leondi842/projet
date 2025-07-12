@@ -47,7 +47,7 @@ if (isset($_GET['edit'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="images/R.jpeg" type="image/png" />
+    <link rel="icon" href="R.jpeg" type="image/png" />
   <title>Espace Consultation Admin - Maison des Hôtes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -58,6 +58,22 @@ if (isset($_GET['edit'])) {
       padding: 0;
       box-sizing: border-box;
     }
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('n.png'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
+
 
     body {
       font-family: 'Roboto', sans-serif;

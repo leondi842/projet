@@ -8,6 +8,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
    
     <style>
+
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo5.jpg'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -57,7 +74,7 @@
         }
 
         nav ul li a:hover {
-            color: #bbdefb;
+            color:hsl(207, 88.20%, 39.80%);
         }
 
         main {

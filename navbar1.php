@@ -86,15 +86,22 @@
       margin: 15px 0;
       opacity: 0.6;
     }
+
+    .sidebar img {
+      width: 80px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
 
   <div class="sidebar closed" id="sidebar">
+    <img src="R.jpeg" alt="Logo Université Norbert ZONGO" />
     <h2>Maison Hôtes</h2>
     <hr class="separator" />
     <nav>
-      
       <a href="admin_dashboard.php"><i class="fas fa-home"></i> Accueil</a>
       <a href="admin_reservations.php"><i class="fas fa-calendar-check"></i> Réservations</a>
       <a href="admin_factures.php"><i class="fas fa-file-invoice"></i> Factures</a>
@@ -102,7 +109,6 @@
       <a href="admin_consultation.php"><i class="fas fa-eye"></i> Consultés</a>
       <a href="admin_messages.php"><i class="fas fa-bell"></i> Notifications</a>
       <a href="admin_logout.php"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
-     
     </nav>
   </div>
 
@@ -160,4 +166,3 @@
 
 </body>
 </html>
-

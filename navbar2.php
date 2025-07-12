@@ -11,7 +11,7 @@
 
   header {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(90deg, #28a745, #1a7c34);
+    background: linear-gradient(90deg,hsl(129, 96.50%, 44.30%), #1a7c34);
     padding: 15px 30px;
     color: #e3f2fd;
     display: flex;
@@ -155,11 +155,12 @@
     <div></div>
   </div>
   <nav id="navbar-links" role="navigation">
-    <a href="index.php" aria-label="Page d'accueil"><span class="material-icons">home</span>Accueil</a>
-    <a href="inscription_connexion.php" aria-label="Inscription"><span class="material-icons">person_add</span>S'inscrire</a>
-    <a href="inscription_connexion.php?connexion" aria-label="Connexion"><span class="material-icons">login</span>Se connecter</a>
+    <a href="index.html" aria-label="Page d'accueil"><span class="material-icons">home</span>Accueil</a>
     <a href="chambres.php" aria-label="Nos chambres"><span class="material-icons">meeting_room</span>Nos chambres</a>
     <a href="faq.php" aria-label="Foire aux questions"><span class="material-icons">help_outline</span>FAQ</a>
+    <a href="inscription_connexion.php" aria-label="Inscription"><span class="material-icons">person_add</span>S'inscrire</a>
+    <a href="inscription_connexion.php?connexion" aria-label="Connexion"><span class="material-icons">login</span>Se connecter</a>
+    
   </nav>
 </header>
 

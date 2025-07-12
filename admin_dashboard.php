@@ -37,6 +37,22 @@ $resOccupe = $conn->query($sqlOccupe)->fetch_assoc();
             height: 100%;
         }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('presi2.jpg'); /* ton image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* ajustable pour la transparence */
+    z-index: -1;
+}
+
+
+
         body {
             display: flex;
             flex-direction: column;
